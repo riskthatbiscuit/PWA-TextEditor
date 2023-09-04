@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
-const { GenerateSW } = require("workbox-webpack-plugin");
+const { GenerateSW, InjectManifest } = require("workbox-webpack-plugin");
 
 module.exports = () => {
   return {
@@ -21,7 +21,11 @@ module.exports = () => {
         title: "Webpack Plugin",
       }),
 
-      new GenerateSW(),
+      // new GenerateSW(),
+      new InjectManifest({
+        swSrc: "./src/src-sw.js",
+        swDest: "service-worker.js",
+      }),
       new WebpackPwaManifest({
         name: "JATE",
         short_name: "JATE",
