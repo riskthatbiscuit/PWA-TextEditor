@@ -19,6 +19,8 @@ J.A.T.E (Just Another Text Editor) is a Progressive Web App (PWA) designed for t
 
 J.A.T.E is a user-friendly text editor that allows you to create, edit, and organize your notes with ease. It is a Progressive Web App (PWA), which means you can use it offline and install it on your device for quick access.
 
+Deployed site is [here](https://aqueous-river-62700-b53080d13a90.herokuapp.com/)
+
 ## Getting Started
 
 ### Prerequisites
