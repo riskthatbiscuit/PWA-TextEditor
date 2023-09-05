@@ -1,4 +1,4 @@
-import { Workbox } from 'workbox-window';
+// import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
@@ -26,8 +26,12 @@ if (typeof editor === 'undefined') {
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // register workbox service worker
-  const workboxSW = new Workbox("/service-worker.js");
-  workboxSW.register();
+  // const workboxSW = new Workbox("/service-worker.js");
+  // workboxSW.register();
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/service-worker.js");
+  });
 } else {
   console.error('Service workers are not supported in this browser.');
 }
