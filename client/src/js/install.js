@@ -5,7 +5,6 @@ const butInstall = document.getElementById('buttonInstall');
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     deferredPrompt = event;
-    installBtn.style.visibility = "visible";
     textHeader.textContent = "Click the button to install!";
 });
 
@@ -14,7 +13,7 @@ butInstall.addEventListener('click', async () => {
     if (deferredPrompt) {
         deferredPrompt.prompt();
         const choiceResult = await deferredPrompt.userChoice;
-        
+
         if (choiceResult.outcome === "accepted") {
         textHeader.textContent = "Successfully installed!";
         butInstall.style.visibility = "hidden";
@@ -31,4 +30,3 @@ window.addEventListener('appinstalled', (event) => {
     textHeader.textContent = "Successfully installed!";
     console.log("👍", "appinstalled", event);
 });
-
