@@ -21,9 +21,9 @@ export const putDb = async (content) => {
     const tx = db.transaction('jate', 'readwrite');
     const store = tx.objectStore('jate');
 
-    await store.add({ todo: content });
+    await store.put({content});
 
-    console.log('Content added successfully.');
+    console.log('Content replaced successfully.');
   } catch {
     console.error('putDb not implemented');
   } 
