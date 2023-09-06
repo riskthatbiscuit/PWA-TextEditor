@@ -21,6 +21,8 @@ J.A.T.E is a user-friendly text editor that allows you to create, edit, and orga
 
 Deployed site is [here](https://aqueous-river-62700-b53080d13a90.herokuapp.com/)
 
+![Example TextEditor Screenshot](PWA-TextEditor_Screenshot.png)
+
 ## Getting Started
 
 ### Prerequisites

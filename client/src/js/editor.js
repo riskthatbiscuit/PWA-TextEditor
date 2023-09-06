@@ -33,7 +33,7 @@ export default class {
 
       if (data !== null && data.length > 0) {
         const lastEntry = data[data.length - 1];
-        // console.log(lastEntry)
+        console.log(lastEntry)
         // console.log(lastEntry.note)
         if (lastEntry && lastEntry.content) {
                 this.editor.setValue(lastEntry.content);
